@@ -1,0 +1,14 @@
+✅ form handling and working with forms.
+
+
+✅ session - It is the duration between login and logout
+
+--------------------------------------------------------------------------------------------
+✅ cookie - maanlo maine insta pe login kiya, login krne ke baad server ko ni pta mai kon hu. jb bhi insta pe koi activity krunga server mujhe puchega ki mai kon hu. aur mujhe btane ke liye login krna padega. aur ye frustrating hota h,
+to yaha introduce hote hai cookies, ye login creds cookies ke paas ajate hain aur baar baar login krne ka kaam cookies kr rahe hote hain,
+aur ye jo pura duration jb ham server se connected hain cookies ke basis pe ise kehte hain session.
+
+cookies is any data which is stored in browser.
+--------------------------------------------------------------------------------------------
+
+jab hamne form me data dala aur submit kiya to server ko jo mila wo hai blob(data ka guccha jisme ip address, location, mac address, form data, http data etc mixed hai.).... to server pe hame is blob ko readable format me change krna hoga.

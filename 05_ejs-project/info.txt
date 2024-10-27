@@ -1,0 +1,23 @@
+☑ setting up parser for forms
+☑ setting up ejs for ejs pages 
+setting up public static files. (css, image, js)
+
+----------------------------------------------------------------------------------
+ejs is just as html but with a power to do calculation or incorporate javascript into it.
+----------------------------------------------------------------------------------
+☒ Initialization of project with npm
+☒ express install
+-----------------------------------------------------------------------------
+
+dynamic routing
+- dynamic routing:  Dynamic routing is a routing technique that generates routes dynamically, allowing for variable or changing parts in the URL. This enables routes to respond based on URL parameters, making it possible to serve different content based on the URL path.
+
+-- steps:
+sabse pehle browser pe jao.
+url likho apna jo apko chayie
+ab us url ko create karo
+req bhejo kuch bhi
+ab us url ko dynamic banana hai to realize karo konsa part dynamic hai(mtlb jo change ho rha hai) aur us part ke peeche colun (:) laga do
+
+- how to get data coming from frontend at backend route
+

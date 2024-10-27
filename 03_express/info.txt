@@ -1,0 +1,12 @@
+What is express js?
+Express js is a framework, it is a set of rules that you must follow. It manages the flow of the application. It manages everything from reciving the request to sending the response.
+
+What is framework?
+A framework is a collection of libraries and tools that help you to build a web application. Framework is a set of rules that you must follow.
+examples of frameworks: Angular, React, Vue, Svelte, Ember, etc.
+
+What is a library?
+A library is a collection of functions that you can use in your code. for example, the math library has functions that you can use to do math.
+
+What are middleware?
+jab bhi server request accept krta hai, waha se route ke paas puhochne tk agar aap use beechme rokte ho aur uspe kuch operations perform krte ho to us element ko middleware kehte hain.

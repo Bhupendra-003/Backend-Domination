@@ -1,0 +1,19 @@
+** Node.js Basics **
+☒ Its not a programming language, technology, framework, library.
+☑ Its is a JS runtime enviornment.
+
+js se backend ni ban skta kyuki js ke pas wo funcionalities hi ni thi jinse backend bnta h.
+
+Ryan Dahl ne soch ke js se backend bnna chayie.
+google chrome ka v8 engine ka code opensource hai aur ryan dahil us v8 ke code ke chedkhani kr rha hai 
+v8engine ka code c++ me likha to kya hame bhi c++ me code krna padega??
+
+Nii, usne v8 ke uper ek wrapper layer bnai jo js me likhi hai, wo layers js code ko uthaegi use c++ me change kregi aur v8 ko degi.
+
+WO RAPPER AUR USKE ANDAR V8 KE COMBO KO KEHTE HAIN | NODE JS |.
+
+npm - Node Package Manager
+It is like a software store where we can download and install packages.
+npm init - It is used to initialize a new project.
+npm install - It is used to install a package.
+node basic usage    
