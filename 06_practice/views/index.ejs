@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/stylesheets/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="main">
         <div class="form">
             <form action="/create" method="post">
-                <input class="title" type="text" name="title" placeholder="Title goes here" required>
-                <textarea name="details" placeholder="write your task details here"></textarea>
+                <input class="title" type="text" name="title" placeholder="Title goes here" required spellcheck="false">
+                <textarea name="details" placeholder="write your task details here" spellcheck="false" ></textarea>
                 <input class="submit" type="submit" value="Submit">
             </form>
         </div>
         <div class="task-container">
             <% if(files.length > 0){ %>
-                <% files.forEach(function(){ %>
+                <% files.forEach(function(val){ %>
                     <div class="task">
-                        <h2>Some task goes here</h2>
-                        <p class="details">asdasasdas</p>
-                        <p class="read-more">Read more</p>
+                        <h2><%= val.slice(0, -4) %></h2>
+                        <div class="task-more-options" >
+                            <a href="/file/<%= val %>"> <p class="read-more">Read more</p></a>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
                     </div>
                 <% }) %>
             <% } else { %>

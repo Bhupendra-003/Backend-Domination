@@ -18,6 +18,13 @@ app.get('/', (req, res)=>{
     })
 });
 
+app.get('/file/:filename', (req, res)=>{
+    fs.readFile(`./files/${req.params.filename}`, 'utf-8', function(err, filedata){
+        log(req.params.filename);
+        log(filedata);
+        res.render('task.ejs', {title: req.params.filename, filedata});
+    })
+})
 // Route to create a new file
 app.post('/create', (req, res)=>{
     fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details, function(err){

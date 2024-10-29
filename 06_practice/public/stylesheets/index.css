@@ -54,6 +54,11 @@ textarea{
     flex-wrap: wrap;
 }
 .task{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 250px;
+    height: 130px;
     padding: 10px;
     background-color: #272629;
     border-radius: 5px;
@@ -66,11 +71,31 @@ textarea{
     color: rgb(163, 163, 163);
     font-weight: 700;
 }
-.task .details{
-    margin: 15px 0;
+
+.task-more-options{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 0;
+    margin-bottom: 5px;
+    margin-top: auto;
 }
-.task .read-more{
+.task a{
+    text-decoration: none;
+    position: relative;
+    bottom: 0px;
     font-size: 0.8rem;
     margin: 7px 0;
+}
+.task .read-more{
     color: #5486f4;
+}
+.task i{
+    font-size: 0.8rem;
+    color: rgb(218, 49, 49);
+}
+.task i:hover{
+    color: red;
+    transform: scale(1.2);
 }
