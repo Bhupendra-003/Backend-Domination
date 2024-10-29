@@ -1,0 +1,26 @@
+Set up express
+set up view engine
+
+set up middlewares
+-> use express to collect data in json and urlencoded
+
+create '/' route
+-> render index file
+-> send 'files' folder to index.ejs
+
+create '/create' route
+-> write data from response recieved from from
+-> redire to '/' route in callback
+
+listen on port 3000
+
+
+***************** index.ejs ***********************
+
+create basic layout
+-> create form with post methods and action='/create'
+
+add functionality
+-> you must have recied an object ('files' named folder).
+-> check for empty folder and give corresponding functionality.
+-> if not empty display task

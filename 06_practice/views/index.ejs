@@ -9,9 +9,9 @@
 <body>
     <div class="main">
         <div class="form">
-            <form action="">
-                <input class="title" type="text" placeholder="Title goes here">
-                <textarea placeholder="write your task details here"></textarea>
+            <form action="/create" method="post">
+                <input class="title" type="text" name="title" placeholder="Title goes here" required>
+                <textarea name="details" placeholder="write your task details here"></textarea>
                 <input class="submit" type="submit" value="Submit">
             </form>
         </div>
@@ -20,7 +20,8 @@
                 <% files.forEach(function(){ %>
                     <div class="task">
                         <h2>Some task goes here</h2>
-                        <p>Read more</p>
+                        <p class="details">asdasasdas</p>
+                        <p class="read-more">Read more</p>
                     </div>
                 <% }) %>
             <% } else { %>

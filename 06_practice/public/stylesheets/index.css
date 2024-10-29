@@ -58,12 +58,19 @@ textarea{
     background-color: #272629;
     border-radius: 5px;
 }
-.task p{
-    font-size: 0.8rem;
-    margin: 7px 0;
-    color: #5486f4;
-}
 .no-task{
     display: block;
     color: rgb(136, 136, 136);
+}
+.title::placeholder, textarea::placeholder{
+    color: rgb(163, 163, 163);
+    font-weight: 700;
+}
+.task .details{
+    margin: 15px 0;
+}
+.task .read-more{
+    font-size: 0.8rem;
+    margin: 7px 0;
+    color: #5486f4;
 }
