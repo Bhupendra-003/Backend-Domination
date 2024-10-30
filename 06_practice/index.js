@@ -31,9 +31,22 @@ app.post('/create', (req, res)=>{
         res.redirect('/');
     });
 }) 
+
+// Route to show edit page
 app.get('/edit/:filename', (req, res)=>{
-    res.render('./edit.ejs');
+    res.render('./edit.ejs', {file: req.params.filename});
 })
+
+//post method to handle files edit in backend
+app.post('/edit', (req, res)=>{
+    fs.rename(`./files/${req.body.title.split(' ').join('-')}.txt`, `./files/${req.body.newTitle.split(' ').join('-')}.txt`, (err)=>{
+        if(err) log(err.stack);
+        res.redirect('/');
+    })
+    
+})
+
+// Route to delete files
 app.get('/delete/:filename', (req, res)=>{
     fs.unlink(`./files/${req.params.filename}`, (err)=>{
         if(err){
