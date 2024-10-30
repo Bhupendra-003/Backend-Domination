@@ -10,7 +10,7 @@
     <a href="/"><button> home </button></a>
     <div class="main">
         <h1>Your Task information....</h1>
-        <h2><%= title %></h2>
+        <h2><%= title.slice(0, -4).replaceAll('-', ' ').trim() %></h2>
         <p><%= filedata %></p>
     </div>
 </body>
