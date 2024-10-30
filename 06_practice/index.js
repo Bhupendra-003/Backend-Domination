@@ -20,19 +20,29 @@ app.get('/', (req, res)=>{
 
 app.get('/file/:filename', (req, res)=>{
     fs.readFile(`./files/${req.params.filename}`, 'utf-8', function(err, filedata){
-        log(req.params.filename);
-        log(filedata);
         res.render('task.ejs', {title: req.params.filename, filedata});
     })
 })
+
 // Route to create a new file
 app.post('/create', (req, res)=>{
-    fs.writeFile(`./files/${req.body.title.split(' ').join('')}.txt`, req.body.details, function(err){
+    fs.writeFile(`./files/${req.body.title.split(' ').join('-')}.txt`, req.body.details, function(err){
         if(err){log(err.stack)};
         res.redirect('/');
-
     });
-})  
+}) 
+app.get('/edit/:filename', (req, res)=>{
+    res.render('./edit.ejs');
+})
+app.get('/delete/:filename', (req, res)=>{
+    fs.unlink(`./files/${req.params.filename}`, (err)=>{
+        if(err){
+            log(err.stack);
+        }else{
+            res.redirect('/');
+        }
+    });
+})
 
 // Start the server on port 3000
 app.listen(3000);
