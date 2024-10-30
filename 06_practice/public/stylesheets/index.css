@@ -91,11 +91,17 @@ textarea{
 .task .read-more{
     color: #5486f4;
 }
-.task i{
+.fa-pencil{
     font-size: 0.8rem;
-    color: rgb(218, 49, 49);
+    color: white;
+    margin-right: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+.fa-trash{
+    font-size: 0.8rem;
+    color: rgb(186, 34, 34);
+    transition: transform 0.2s ease-in-out;
 }
 .task i:hover{
-    color: red;
     transform: scale(1.2);
 }

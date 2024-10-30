@@ -20,10 +20,13 @@
             <% if(files.length > 0){ %>
                 <% files.forEach(function(val){ %>
                     <div class="task">
-                        <h2><%= val.slice(0, -4) %></h2>
+                        <h2><%= val.replaceAll('-', ' ').slice(0, -4) %></h2>
                         <div class="task-more-options" >
                             <a href="/file/<%= val %>"> <p class="read-more">Read more</p></a>
-                            <i class="fa-solid fa-trash"></i>
+                            <div>
+                                <a href="/edit/<%= val %>"><i class="fa-solid fa-pencil"></i></a>
+                                <a href="/delete/<%= val %>"><i class="fa-solid fa-trash"></i></a>
+                            </div>
                         </div>
                     </div>
                 <% }) %>
